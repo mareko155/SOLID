@@ -1,0 +1,65 @@
+package edu.agh.wfiis.solid.ocp.example2;
+
+public class Calculator {
+
+public enum  operators
+{
+
+OperatorPlus  ('+'), 
+OperatorMinus  ('-'), 
+OperatorMultiply  ('*'), 
+OperatorDivide  ('/');
+
+}
+
+
+    public int calculate(String[] args) {
+        int val1 = Integer.valueOf(args[0]);
+        int val2 = Integer.valueOf(args[2]);
+        String operator = args[1];
+
+int result;
+        
+ int OperatorPlus(int val1, int val2)
+{
+	result = val1 + val2;
+    return result;
+}
+
+  int OperatorMinus(int val1, int val2)
+{
+	result = val1 - val2;
+    return result;
+}
+
+ int OperatorMultiply(int val1, int val2)
+{
+	result = val1*val2;
+    return result;
+}
+
+ int OperatorDivide(int val1, int val2)
+{
+	if(b!=0)
+	{
+	result = val1/val2;
+	}
+	else
+	{
+		throw new zeroinDenominatorException("number 0 cant be in denominator");
+	}
+
+    return result;
+}
+
+        throw new IllegalArgumentException(operator + " is not supported");
+    }
+
+    public static void main(String[] args) {
+        Calculator calculator = new Calculator();
+        calculator.calculate(args);
+    }
+
+	
+
+}
